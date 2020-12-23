@@ -1,0 +1,45 @@
+.main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.div-dices {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.div-attack-dice {
+    margin-top: 40px;
+}
+
+.img-dice {
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button-delete {
+    width: 250px;
+    border-width: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: white;
+    background-color: #B50E40;
+}
+
+.button-random {
+    width: 250px;
+    border-width: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: white;
+    background-color: #25B25D;
+}
+
+.div-button {
+    margin-top: 20px;
+}
