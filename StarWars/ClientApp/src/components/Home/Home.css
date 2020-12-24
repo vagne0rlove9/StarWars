@@ -1,11 +1,53 @@
+body {
+    min-height: 100%;
+    padding-top: 40px;
+    min-width: 700px
+}
+
+.img-bg {
+    width: 100%;    
+    height: 125%;    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .main {
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    background-color: #f9f9f9;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.main::after {
+    top: 0;
+    right: 0;
+    border-width: 0 22px 22px 0;
+    border-color: transparent #061A23 transparent transparent; 
+    z-index: 8;
+}
+
+.main::before {
+    bottom: 0;
+    left: 0;
+    border-width: 22px 0 0 22px;
+    border-color: transparent transparent transparent #061A23; 
+}
+
+.main::before, .main::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    z-index: 9;
 }
 
 .div-dices {
-    margin-top: 40px;
     font-size: 30px;
     font-weight: 600;
 }

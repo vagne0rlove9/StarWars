@@ -43,6 +43,8 @@ class Home extends Component {
 
     render() {
         return (
+	<>
+            <img className="img-bg" alt="" src="/images/bg2.jpg" />
             <div className="main">
                 <div className="div-dices">
                     Кубы атаки
@@ -132,6 +134,7 @@ class Home extends Component {
 
                 </div>
             </div>
+	</>
         );
     }
 }
