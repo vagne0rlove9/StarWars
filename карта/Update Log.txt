@@ -1,0 +1,22 @@
+1.1:
+	- Added terminal tokens (Normal, Blue, Green, Red, Yellow)
+	- Added enemy spawn zones (Green, Yellow, Red)
+
+1.2
+	- Added doors
+	- Added Shift hold to toggle Pixel Move mode
+
+1.3
+	- Added all character tokens
+	- fixed issue where IAMAP files did not keep proper layer order (Map tiles on bottom, Mission tokens in the middle, Characters on top)
+	- Added Q and E for quick zoom out and in. Zooming does not wipe canvas anymore.
+	- Window can now be maximized to full screen, making canvas area bigger.
+
+		NOTE: Version 1.3 of IA Map Creator does not work with previous IAMAP files from versions 1.2 and before.
+	
+Known Bugs:
+	- The zooming is NOT perfect. Everytime you toggle the zoom in/out, it reloads each tile/token from your disk and resizes them
+	based on the new scale. I have noticed it also starts to slightly move tiles off of the grid over each use, 
+	due to the math I am using to scale everything.
+
+	I would recommend keeping your map at a certain scale once you have found something that works and not changing it unless you have to.

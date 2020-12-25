@@ -102,10 +102,20 @@ body {
 .img-hero {
     float: left;
     margin-right: 20px;
+    width: 557px;
+    height: 438px;
 }
 
 .img-hero-cards {
+    width: 240px;
     margin-right: 50px;
+    margin-bottom: 80px;
+}
+
+.img-hero-cards-reboot {
+    width: 240px;
+    margin-right: 50px;
+    margin-bottom: 80px;
 }
 
 .label {
@@ -121,4 +131,9 @@ select, input {
 
 .img-hero-card-rotate {
     transform: rotate(90deg)
+}
+
+.img-monster {
+    width: 350px;
+    margin-left: 70px
 }
