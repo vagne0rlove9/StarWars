@@ -6,7 +6,9 @@ class Home extends Component {
 
     state = {
         dicesAttack: [],
-        dicesDefence: []
+        dicesDefence: [],
+	chubaca: "images/Chubaca0.png",
+	chubacaCards: [{src: "images/ChubacaCard1.png", class: "img-hero-cards"}, {src: "images/ChubacaCard2.png", class: "img-hero-cards"}, {src: "images/ChubacaCard3.png", class: "img-hero-cards"}]
     }
 
     handleClikcDiceAttack = (event) => {
@@ -18,6 +20,14 @@ class Home extends Component {
         })
 
         this.setState({ dicesAttack: dices })
+    }
+
+    handleChangeDamage = (event) => {
+	if(event.target.value >= 17)
+	    this.setState({ chubaca: "images/Chubaca1.png" })
+	console.log(event.target.value)
+	if(event.target.value === "-1")
+	    this.setState({ chubaca: "images/Chubaca0.png" })
     }
 
     handleClikcDiceDefence = (event) => {
@@ -41,10 +51,18 @@ class Home extends Component {
             this.setState({ dicesDefence: [] });
     }
 
+    handleClickHeroCard = (event) => {
+	var cards = this.state.chubacaCards
+	cards[event.target.id].class += " img-hero-card-rotate"
+	console.log(cards)
+	this.setState({ chubacaCards: cards })
+    }
+
     render() {
         return (
             <>
-                <img className="img-bg" alt="" src="images/bg2.jpg" />
+		<img alt="" src="images/left.png" className="img-bg-left"/>
+		<img alt="" src="images/right.png" className="img-bg-right"/>
                 <div className="main">
                     <div className="div-dices">
                         Кубы атаки
@@ -134,7 +152,32 @@ class Home extends Component {
 
                     </div>
                 </div>
-               
+               <div className="div-heros">
+		   <div className="div-hero">
+				<img alt="" src={this.state.chubaca} className="img-hero"/>
+				<label className="label">Число активаций
+				    <select>
+				        <option>2</option>
+	    		        	<option>1</option>
+				        <option>0</option>
+				    </select>
+				</label>
+				<label className="label">Число ран
+				    <input onChange={this.handleChangeDamage}/>
+				</label>
+				<label className="label">Число усталости
+				    <input/>
+				</label>
+			<div>
+			    {
+				this.state.chubacaCards.map((card, index) => {
+					return <img alt="" onClick={this.handleClickHeroCard} id={index} key={index} src={card.src} className={card.class}/>
+				})
+			    }
+			</div>
+		   </div>
+		   
+	       </div>
             </>
         );
     }
